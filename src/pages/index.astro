@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <html lang="en">
@@ -12,13 +13,14 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
-    <main>
-      <h1>Astro</h1>
-      main
-    </main>
+   	<Hero/>
     <section>proyectos</section>
     <section>formulario de inscripción</section>
     <footer>pie de pagina</footer>
+		<!-- Bonus Section Idea:
+    You could add a Call to Action (CTA) right after the cards, like:
+    “Ready to bring your ideas to life? Let’s talk!”
+    With a button labeled: “Get a Free Quote” -->
   </body>
 </html>
 
@@ -86,6 +88,20 @@ import Header from "../components/Header.astro";
     text-wrap: balance;
   }
 
-  body {
-  }
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+  ul {
+		list-style-type: none;
+
+	}
+
+	button {
+		cursor: pointer;
+		background-color: transparent;
+		color: inherit;
+		border: none;
+	}
 </style>

@@ -1,0 +1,75 @@
+---
+import HeroSectionCards from "./HeroSectionCards.astro";
+---
+
+<!-- Hero Section -->
+<main class="main">
+   <section class="main__title">
+     <h1>
+      <span class="title_highlight design">
+        Designs
+      </span>
+       That Speak,
+       <span class="title_highlight code">
+         {"<Code/>"}
+        </span>
+        That Performs
+    </h1>
+     <p>
+      A team of developers and designers obsessed with perfection, building 
+      websites that are as beautiful as they are functional.
+    </p>
+  </section>
+  <HeroSectionCards />
+</main>
+
+<style lang="scss">
+  .main {
+    --_gl-padding: 1rem;
+    padding: var(--_gl-padding);
+    min-height: 100dvh;
+    // background-color: red;
+
+    &, &__title {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 1rem;
+    }
+    
+    &__title {
+      --_title-size: 70ch;
+      max-width: var(--_title-size);
+      text-align: center;
+      margin-block: 1rem;
+
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 4.5rem);
+        font-weight: 900;
+      }
+
+      .title_highlight {
+        font-weight: 600;
+
+        &.design {
+          font-style: italic;
+          color: #CDCDCD;
+        }
+        &.code {
+          font-style: none;
+          color: #CDCDCD;
+        }
+      }
+
+      p {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        font-weight: 400;
+        color: #5C5C5C;
+      }
+    }
+  }
+
+</style>
