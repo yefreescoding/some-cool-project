@@ -1,0 +1,54 @@
+---
+
+---
+
+<form id="job-form">
+  <label for="company">Company:</label>
+  <input type="text" id="company" name="company" required />
+
+  <label for="position">Position:</label>
+  <input type="text" id="position" name="position" required />
+
+  <label for="date-applied">Date Applied:</label>
+  <input type="date" id="date-applied" name="date-applied" required />
+
+  <label for="status">Status:</label>
+  <select id="status" name="status" required>
+    <option value="Applied">Applied</option>
+    <option value="Interview">Interview</option>
+    <option value="Offer">Offer</option>
+    <option value="Rejected">Rejected</option>
+  </select>
+
+  <button type="submit">Add Application</button>
+</form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  input,
+  select,
+  button {
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #218838;
+  }
+</style>
