@@ -25,13 +25,17 @@ function addApplication(e) {
 
 function displayApplication(application) {
   const applicationList = document.getElementById("application-list");
-  const li = document.createElement("li");
-  li.innerHTML = `
-        <strong>${application.company}</strong> - ${application.position} <br>
-        Date Applied: ${application.dateApplied} <br>
-        Status: ${application.status}
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+        <td>${application.company}</td>
+        <td>${application.position}</td>
+        <td>${application.dateApplied}</td>
+        <td class="status" data-status="${application.status}">
+          <span class="status-dot"></span>
+          ${application.status}
+        </td>
     `;
-  applicationList.appendChild(li);
+  applicationList.appendChild(tr);
 }
 
 function loadApplications() {

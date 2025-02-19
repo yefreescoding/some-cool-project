@@ -2,15 +2,24 @@
 
 ---
 
-<form id="job-form">
+<form id="job-form" class="form">
   <label for="company">Company:</label>
-  <input type="text" id="company" name="company" required />
-
+  <div class="input_container">
+    <img src="/building.svg" alt="company logo" />
+    <input type="text" id="company" name="company" required />
+  </div>
   <label for="position">Position:</label>
-  <input type="text" id="position" name="position" required />
+
+  <div class="input_container">
+    <img src="/position.svg" alt="company logo" />
+    <input type="text" id="position" name="position" required />
+  </div>
 
   <label for="date-applied">Date Applied:</label>
-  <input type="date" id="date-applied" name="date-applied" required />
+  <div class="input_container">
+    <img src="/calendar.svg" alt="company logo" />
+    <input type="date" id="date-applied" name="date-applied" required />
+  </div>
 
   <label for="status">Status:</label>
   <select id="status" name="status" required>
@@ -27,28 +36,67 @@
   form {
     display: flex;
     flex-direction: column;
+    padding: 0.5rem;
   }
 
   label {
-    margin-top: 10px;
+    margin-block: 10px 5px;
+    font-weight: 600;
+    color: hsl(0, 0%, 40%);
   }
 
-  input,
+  img {
+    aspect-ratio: 1;
+    width: 20px;
+  }
+
+  .input_container {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(0, 0%, 80%);
+
+    & input {
+      border: none;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+
+    & input:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
   select,
   button {
     padding: 10px;
     margin-top: 5px;
+    font-size: 0.9rem;
+  }
+
+  input,
+  select {
+    /* margin-left: 0.5rem; */
+    border-radius: 0.5rem;
+    border: 1px solid hsl(0, 0%, 80%);
   }
 
   button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
     cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: hsl(278, 100%, 90%);
+    color: hsl(278, 100%, 40%);
+    border: 1px solid hsl(278, 100%, 80%);
     margin-top: 20px;
+    font-weight: 700;
+    transition: all 120ms ease-in-out;
   }
 
   button:hover {
-    background-color: #218838;
+    background-color: hsl(278, 100%, 40%);
+    color: hsl(278, 100%, 90%);
   }
 </style>
