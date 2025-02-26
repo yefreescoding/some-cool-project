@@ -1,0 +1,129 @@
+:root {
+  --heading-font: "Big Shoulders Display", sans-serif;
+  --regular-font: "Lexend Deca", sans-serif;
+  /* Colors */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 1rem;
+}
+.main__section {
+  --_width: 67.5rem;
+  --_col-width: calc(var(--_width) / 3);
+
+  width: min(100%, 67.5rem);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--_col-width)), 1fr)
+  );
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 16px hsl(0, 0%, 80%);
+}
+
+.main__card {
+  isolation: isolate;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50dvh;
+  width: 100%;
+}
+
+.main__card-image {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    /* aspect-ratio: 1; */
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.main__card-header {
+  padding: 1rem;
+}
+
+.main__card-footer {
+  color: white;
+  padding: 1rem;
+
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 43%, 0) 10%,
+    hsla(0, 0%, 43%, 0.2),
+    hsla(0, 0%, 10%, 0.6)
+  );
+  backdrop-filter: blur(3px);
+
+  & h2 {
+    text-transform: uppercase;
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+  }
+
+  & p {
+    font-size: 0.9rem;
+    margin-block: 0.5rem 1rem;
+    /* height: 10px; */
+    overflow: hidden;
+  }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--regular-font);
+    font-weight: 500;
+    border: 1px solid hsl(0, 0%, 35%);
+    box-shadow: inset 0 0 0 1px hsl(0, 0%, 25%);
+    border-radius: 0.5rem;
+    background-color: black;
+    padding: 3px 6px;
+    width: fit-content;
+  }
+}
+.main__article--sedans {
+  background-color: var(--Bright-orange);
+}
+.main__article--suv {
+  background-color: var(--Dark-cyan);
+}
+.main__article--luxury {
+  background-color: var(--Very-dark-cyan);
+}
