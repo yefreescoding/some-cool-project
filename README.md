@@ -45,7 +45,7 @@ To run any of the projects locally, follow these steps:
   pnpm install
 ```
 
-4.Start the development server:
+4. Start the development server:
 
 ```bash
   pnpm run dev
@@ -53,19 +53,20 @@ To run any of the projects locally, follow these steps:
 
 ### 📚 Technologies Used
 
-• HTML5 and CSS3
-• JavaScript (ES6+)
-• React.js and Next.js
-• TypeScript
-• TailwindCSS
-• Vite/Webpack
+- HTML5 and CSS3
+- JavaScript (ES6+)
+- React.js and Next.js
+- TypeScript
+- TailwindCSS
+- Vite/Webpack
 
 ### 🎯 Goals
 
 The purpose of this repo is to:
-• Build and document small projects to strengthen my front-end skills.
-• Experiment with new technologies and frameworks.
-• Prepare for front-end job interviews by practicing real-world problem-solving.
+
+- Build and document small projects to strengthen my front-end skills.
+- Experiment with new technologies and frameworks.
+- Prepare for front-end job interviews by practicing real-world problem-solving.
 
 ### 🤝 Contributing
 
@@ -74,9 +75,6 @@ Contributions, issues, and feature requests are welcome! Feel free to open a pul
 ### 📞 Contact
 
 If you want to get in touch, feel free to reach me via:
-• Email: yefree13santos@outlook.com
-• LinkedIn: Yefree De Los Santos
 
-⭐️ Happy coding and keep building awesome things!
-
-Would you like me to customize any sections — like adding more technical details, or maybe tweaking the style to better match your vibe? Let me know! 🚀
+- Email: yefree13santos@outlook.com
+- LinkedIn: Yefree De Los Santos
