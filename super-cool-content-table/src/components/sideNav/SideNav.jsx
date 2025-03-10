@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 
 import { useState, useEffect } from "react";
-import styles from "./sideNav.module.css";
+import styles from "./SideNav.module.css";
 
 export const SideNav = ({ opacity = 1, timing = 200, width = 100 }) => {
   const [isOpen, setIsOpen] = useState(false);
