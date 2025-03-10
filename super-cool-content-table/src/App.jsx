@@ -1,6 +1,6 @@
 import "./App.css";
 import { Body } from "./components/Body";
-import { SideNav } from "./components/sideNav/sideNav";
+import { SideNav } from "./components/sideNav/SideNav";
 
 function App() {
   return (
