@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --app-with: 38.75rem;
+
+  --clr-primary: #ededed;
+  --clr-secondary: #1a1a1c;
+
+  --clr-text-primary: #202020;
+  --clr-text-secondary: #6c757d;
+}
+
+@layer components {
+  .mini-nav {
+    position: fixed;
+    z-index: calc(9 * 1000);
+    top: 0;
+    transform: translateY(-100%);
+    @apply bg-white w-[var(--app-with)] flex items-center justify-between  rounded-b-4xl px-4 py-2
+      text-gray-800 font-semibold;
+
+    transition: all 0.3s ease;
+
+    &[data-show="true"] {
+      transform: translateY(0);
+    }
+  }
+
+  .task-card {
+    interpolate-size: allow-keywords;
+
+    transition-duration: 1s;
+    transition-property: height padding;
+    transition-delay: 1.5s;
+    isolation: isolate;
+    overflow: clip;
+    /* transitions */
+    height: 276px;
+    max-height: 360px;
+    padding: 1.5rem 1rem;
+    margin: 0;
+
+    &[data-state="done"] {
+      height: 0;
+      padding: 0;
+    }
+
+    & .card-task-done {
+      /* display: none; */
+      visibility: hidden;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      @apply bg-white rounded-4xl absolute inset-0 flex-col pt-12 justify-start items-center;
+
+      &.done {
+        visibility: visible;
+        display: flex;
+        z-index: 0;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
